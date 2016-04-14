@@ -23,4 +23,4 @@ var fertilizerSchema = new mongoose.Schema({
     expiryDate: Date
 });
 
-mongoose.model('Fertilizer', fertilizerSchema);
+module.exports = mongoose.model('Fertilizer', fertilizerSchema);

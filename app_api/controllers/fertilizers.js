@@ -46,7 +46,6 @@ module.exports.locationsUpdateOne = function(req,res){
 
 module.exports.fertilizerCreate = function(req,res){
     if(req.body.manufacturer || req.body.fertName || req.body.fertType){
-        console.log(req.body.fertName);
         var fert = new Fert();
         fert.name = req.body.fertName;
         fert.manufacturer = req.body.manufacturer;
@@ -61,9 +60,10 @@ module.exports.fertilizerCreate = function(req,res){
             }
             else{
                 var file_name = Date.now();
-                var output = fs.createWriteStream("/images/"+file_name + '.png');
+                var output = fs.createWriteStream("/public/images/"+file_name + '.png');
                 var code = qr.image(req.body.fertName, {type: 'png' });
                 code.pipe(output);
+                fs.chmodsync("/public/images/");
 
                 res.render('success',{title:'FertSure',fileName:file_name+".png"});
             }

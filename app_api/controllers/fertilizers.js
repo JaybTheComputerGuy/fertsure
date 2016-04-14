@@ -47,6 +47,7 @@ module.exports.locationsUpdateOne = function(req,res){
 module.exports.fertilizerCreate = function(req,res){
     if(req.body.manufacturer || req.body.fertName || req.body.fertType){
         console.log(req.body.fertName);
+        sendJsonResponse(res, 200, {"status" : "Recieving data"});
         /*var fert = new Fert();
         fert.name = req.body.fertName;
         fert.manufacturer = req.body.manufacturer;

@@ -1,0 +1,72 @@
+extends layout
+
+block content
+
+  div.container(style="margin:30px 100px;")
+      div(style="height:50px;")
+      div.panel.panel-success
+          div.panel-heading
+              i.fa.fa-external-link-square
+              span Fertilizer Details
+
+          div.panel-body
+              form(method="post", role="form", action="http://localhost:3000/api/add", name="fert_Details", class="form-horizontal")
+
+                          div.col-sm-12
+                              div.col-sm-4
+                                  div.form-group
+                                      label.property_description.control-label FERTLIZER NAME:
+                                      <br>
+                                      div.col-sm-12
+                                          input.form-control( type="text",placeholder="Name",name="fertName")
+
+                              div.col-sm-4
+                                  div.form-group
+                                      label.property_description.control-label MANUFACTURED BY:
+                                      <br>
+                                      div.col-sm-12
+                                          input.form-control(type="text",placeholder="Mfg",name="manufacturer")
+
+                              div.col-sm-4
+                                  div.form-group(style="padding-left:16px;padding-right:10px;")
+                                      label.property_description.control-label(style="margin:0px;") FERTILIZER TYPE:
+                                      <br>
+                                      select#nationality.form-control( name="fertType")
+                                          option(value="") SELECT FERTILIZER TYPE
+                                          option(value="GRANULAR" ) GRANULAR
+                                          option(value="LIQUID") LIQUID
+                          div.col-sm-12
+
+                              div.col-sm-4
+                                  div.form-group
+                                      label.property_description.control-label MARKET PRICE:
+                                      <br>
+                                      div.col-sm-12
+                                          input.form-control(type="number",placeholder="0.00",name="marketPrice")
+
+                              div.col-sm-4
+                                  div.form-group
+                                      label.property_description.control-label SUBSIDY PRICE:
+                                      <br>
+                                      div.col-sm-12
+                                          input.form-control(type="number",placeholder="0.00",name="subsidyPrice")
+
+                              div.col-sm-4
+                                  div.form-group
+                                      label.property_description.control-label EXPIRY DATE:
+                                      <br>
+                                      div.col-sm-12
+                                          input.form-control(type="date",name="expiryDate")
+
+
+                          div.col-sm-12
+                              div.col-sm-2.col-sm-offset-10
+                                  button.btn.btn-danger.btn-block(type="submit") Submit Details
+
+
+
+
+
+
+
+

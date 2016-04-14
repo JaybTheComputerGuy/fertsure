@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+        title= title
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+        link(rel='stylesheet',href='/font-awesome/css/font-awesome.css')
+
+        link(rel='stylesheet', href='/plugins/bootstrap/css/bootstrap.min.css')
+        link(rel='stylesheet' href='/plugins/font-awesome/css/font-awesome.min.css')
+        link(rel='stylesheet', href='/plugins/iCheck/skins/all.css')
+        link(rel='stylesheet', href='/plugins/bootstrap-colorpalette/css/bootstrap-colorpalette.css')
+        link(rel='stylesheet', href='/plugins/perfect-scrollbar/src/perfect-scrollbar.css')
+        link(rel='stylesheet', href='http://localhost/ekodi/assets/css/print.css', media='print')
+        link(rel='stylesheet', href='http://localhost/ekodi/css/fileinput.css',  media='print')
+        link(rel='stylesheet',  href='/plugins/select2/select2.css')
+        link(rel='stylesheet', href='/plugins/DataTables/media/css/DT_bootstrap.css')
+        link(href='/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css', rel='stylesheet')
+        link(href='/plugins/bootstrap-modal/css/bootstrap-modal.css', rel='stylesheet')
+        link(rel='stylesheet', href='/stylesheets/main.css')
+
+  body(style="overflow-x:hidden;")
+
+      div.navbar.navbar-inverse.navbar-fixed-top(style="margin-bottom:30px;")
+              div.container
+                 div.navbar-header
+                      a.navbar-brand(href="/") FertSure
+
+      div.container
+          block content
+
+      div.footer.clearfix
+        div.footer-inner 2016 &copy; FertSure. All rights reserved
+        div.footer-items
+          span.go-top
+            i.fa.fa-chevron-up
+
+                    
+
+    script(src="/plugins/jQuery-lib/2.0.3/jquery.min.js")
+    script(src="/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js")
+    script(src="/plugins/bootstrap/js/bootstrap.min.js")
+    script(src="/plugins/bootstrap-colorpalette/js/bootstrap-colorpalette.js")
+    script(src="/plugins/jquery-validation/dist/jquery.validate.min.js")
+    script(src="plugins/bootstrap-modal/js/bootstrap-modalmanager.js")
+    script(src='/bootstrap/js/bootstrap.min.js')

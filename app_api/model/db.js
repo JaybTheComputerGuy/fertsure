@@ -2,6 +2,10 @@ var mongoose = require( 'mongoose' );
 
 
 var dbURI = 'mongodb://localhost/fertSure';
+if (process.env.NODE_ENV === 'production'){
+    dbURI = 'mongodb://<jayb21>:<incorrect>@ds030829.mlab.com:30829/fertsure';
+}
+
 mongoose.connect(dbURI);
 
 mongoose.connection.on("connected",function(){

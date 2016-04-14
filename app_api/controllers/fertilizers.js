@@ -47,7 +47,7 @@ module.exports.locationsUpdateOne = function(req,res){
 module.exports.fertilizerCreate = function(req,res){
     if(req.body.manufacturer || req.body.fertName || req.body.fertType){
         console.log(req.body.fertName);
-        var fert = new Fert();
+        /*var fert = new Fert();
         fert.name = req.body.fertName;
         fert.manufacturer = req.body.manufacturer;
         fert.fertType = req.body.fertType;
@@ -68,7 +68,7 @@ module.exports.fertilizerCreate = function(req,res){
 
                 res.render('success',{title:'FertSure',fileName:file_name+".png"});
             }
-        });
+        });*/
     }
     else{
         sendJsonResponse(res, 400, {"status" : "No data"});

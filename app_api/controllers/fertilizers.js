@@ -55,7 +55,9 @@ module.exports.fertilizerCreate = function(req,res){
         fert.subsidyPrice = req.body.subsidyPrice;
         fert.expiryDate = req.body.expiryDate;
 
-        fert.save(function (err){
+        sendJsonResponse(res, 200, fert);
+
+        /*fert.save(function (err){
             if (err){
                 sendJsonResponse(res, 200, {"status" : "success"});
             }
@@ -67,7 +69,7 @@ module.exports.fertilizerCreate = function(req,res){
 
                 res.render('success',{title:'FertSure',fileName:file_name+".png"});
             }
-        });
+        });*/
     }
     else{
         sendJsonResponse(res, 400, {"status" : "No data"});
